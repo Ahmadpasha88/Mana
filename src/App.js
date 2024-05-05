@@ -25,6 +25,7 @@ import HostelDetailedView from './Components/HostelComponent/HostelDetailedView'
 import HostelRegister from './Components/HostelComponent/HostelRegister';
 import UserPaymentHistory from './Components/UserComponent/UserPaymentHistory';
 import HostelRegistrationContactForm from './Components/HostelComponent/HostelRegistrationContactForm';
+import Loader from './Components/Loader';
 
 
 
@@ -61,7 +62,7 @@ const App = () => {
           <Route exact path='/complaints' element={<ComplaintList/>} />
           <Route exact path='/create_remark' element={<CreateRemark/>} />
           <Route exact path='/raised_remarks' element={<RaisedRemarks/>} />
-   
+          <Route exact path='/loader' element={<Loader/>} />
           <Route exact path='/pending_hostel' element={<PendingHostel/>} />
           <Route exact path='/profile' element={<UserProfile/>} />  
           <Route exact path='/about' element={<AboutPage/>} />

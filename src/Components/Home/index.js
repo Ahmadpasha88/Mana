@@ -167,6 +167,7 @@ import Footer from "../Footer";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import { MdOutlineArrowCircleRight } from "react-icons/md";
+import Loader from "../Loader";
 
 const Home = () => {
 
@@ -174,6 +175,12 @@ const Home = () => {
     window.scrollTo(0, 0);
     console.log('hhhh');
   }, []);
+
+  const [loading, setLoading] = useState(true);
+
+  window.onload = () => {
+    setLoading(false); // When window is loaded, hide the loader
+  };
 
 
 
@@ -200,6 +207,7 @@ const Home = () => {
   const [index, setIndex] = useState(0);
 
   const [selectedCategory, setSelectedCategory] = useState(0)
+ 
 
   // const onChangeSelectedCategory=async(e)=>{
 
@@ -242,6 +250,11 @@ const Home = () => {
 
   return (
     <div className="row m-0 p-0 homeScreen">
+
+{loading ? (
+        <Loader />
+      ) : (
+        <>
 
       <section className="pt-1 pt-lg-5 mb-5 section-1" 
       
@@ -382,6 +395,9 @@ const Home = () => {
         </Link>
 
       </section>
+      </>
+      )
+    }
 
       <Footer />
     </div>
