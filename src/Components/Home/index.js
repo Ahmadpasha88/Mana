@@ -307,7 +307,7 @@ const Home = () => {
         </div>
 
         <div className="text-center  fs-5 fw-medium mt-3">
-          <p className="fw-bolder" style={{ color: "white" }}>Discover, Compare, Stay Smart</p>
+          <p className="fw-bolder" style={{ color: "white" }}>Discover.Compare.Stay Smart</p>
         </div>
       </section>
 
