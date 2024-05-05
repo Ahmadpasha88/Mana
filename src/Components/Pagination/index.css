@@ -1,0 +1,4 @@
+.pagination .page-item.active .page-link {
+    background-color: #081735 !important;
+    border-color: black !important; /* optional: if you want to change the border color */
+  }

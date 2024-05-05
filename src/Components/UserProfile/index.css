@@ -1,0 +1,11 @@
+/* input{
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 500;
+    margin: 10px;
+} */
+
+.editBtn{
+    background-color: rgb(27, 26, 47);
+    color: white;
+}

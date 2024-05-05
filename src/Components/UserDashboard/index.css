@@ -1,0 +1,104 @@
+.user-dashboard{
+    /* background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 26%, rgba(0,212,255,1) 100%); */
+
+
+/* background-repeat: no-repeat;
+background-size: cover;
+color: white; */
+/* 
+background: rgb(0, 61, 135);
+background: linear-gradient(0deg, rgba(7, 15, 15, 0.824) 0%, rgba(6, 13, 47, 0.952) 100%);
+color: white!important; */
+
+color: black;
+
+}
+
+.dashBoard{
+    /* background-color: #081735; */
+    min-height: 80vh;
+    background-image: url('https://s3-alpha.figma.com/hub/file/3485325162/a246af21-dcf4-470d-bf21-13710bacc942-cover.png');
+    background-size: contain;
+    width: 100%;
+    
+}
+
+
+/* @media screen and (min-width: 700px) {
+    .dashBoard {
+        background-color: white;
+        color: black;
+    }
+    .dashBoard h2{
+        color: rgb(2, 49, 85);
+    }
+    .user-dashboard{
+        color: rgba(15, 5, 5, 0.82);
+    }
+} */
+
+
+
+
+
+.hostelInfo{
+    /* background: rgb(18, 111, 224);
+background: linear-gradient(0deg, rgba(4, 132, 230, 0.902) 0%, rgba(8, 20, 74, 0.952) 100%);
+color: white; */
+
+border: 2px solid rgb(8, 13, 92);
+color: rgb(8, 13, 92);
+
+}
+
+.hostelInfo:hover{
+   background-color: rgb(8, 13, 92);
+   color: white;
+}
+
+.findMoreBtn{
+    /* background: rgb(224, 152, 18);
+background: linear-gradient(0deg, rgba(230, 128, 4, 0.902) 0%, rgba(209, 137, 124, 0.952) 100%);
+color: white; */
+border: 2px solid #ad00cc;
+color: #ad00cc;
+
+}
+
+.findMoreBtn:hover{
+   background-color: #ad00cc;
+   color: white;
+}
+
+.exit-button {
+    background-color: #ff0000; /* Red color */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .exit-button:hover {
+    background-color: #cc0000; /* Darker red color on hover */
+  }
+.payBtn{
+    background: rgb(19, 160, 47);
+background: linear-gradient(0deg, rgba(19, 208, 60, 0.788) 0%, rgb(23, 92, 75) 100%);
+}
+
+.profilePhoto{
+    max-height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.profileCard{
+    background-image: url('https://res.cloudinary.com/bizstak/image/upload/v1684244250/backdrop2_ohofvj.png');
+    /* background-image: url('https://www.cloudtamers.com/wp-content/themes/cloudtamers/images/CT-Icon-Large.png'); */
+
+    background-size: cover;
+    height: 100%;
+}

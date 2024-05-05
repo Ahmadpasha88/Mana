@@ -1,0 +1,67 @@
+.logoFont{
+    font-family: "Libre Baskerville";
+    color: #081735;
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+.header-font-color{
+  color: #081735 !important;
+}
+.logo {
+  font-size: 18px;
+  /* font-weight: 900; */
+}
+
+.slogon {
+  font-size: 10px;
+}
+.options{
+  font-size: 15px;
+  font-weight: 700;
+  /* color: rgba(63, 62, 62, 0.66); */
+  /* color: white; */
+  color: #081735;
+}
+
+.blueText{
+  color: #081735!important;
+  font-weight: normal;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+
+}
+
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Adjust z-index as needed */
+  /* background-color: #081735 !important; */
+  background-color: transparent;
+  color: #081735;
+
+}
+
+/* .nav-bg-mobile{
+  background-color: whitesmoke;
+} *
+
+/* Adjust padding/margins for content to accommodate the fixed navbar */
+body {
+  padding-top: 123px; /* Adjust as per your navbar height */
+ }
+
+ /* .navbar-toggler-icon span {
+  background-color: #fff; /* Change this to your desired color */
+/* } */
+
+
+.scrolled .navbar {
+  background-color: white; /* Change background color when scrolled */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth effect */
+}
+
+.navbar-collapse.show .navbar {
+  background-color: white; /* Keep background transparent when mobile menu is open */
+   /* Remove shadow when mobile menu is open */
+}

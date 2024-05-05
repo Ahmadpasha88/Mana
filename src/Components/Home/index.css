@@ -1,0 +1,221 @@
+.highlight-lines{
+    /* text-shadow:  2px 2px 5px rgba(220, 147, 53, 0.785); */
+    /* color: rgba(10, 9, 8, 0.934); */
+   
+    /* color: '#081735'; */
+    color: rgba(6, 11, 36, 0.795);
+    /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.search-btn{
+  background-color: rgb(13, 64, 106);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* .highlight-lines {
+  /* text-shadow:  2px 2px 5px rgba(220, 147, 53, 0.785); */
+  /* text-shadow: 2px 2px 5px rgba(11, 11, 11, 0.785);
+
+  color: rgb(255, 255, 255);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} */ 
+
+
+/* background-image: linear-gradient(
+  254deg,
+  #ebe5e5 1.97%,
+  #fafafab7 25.3%,
+  rgba(26, 26, 26, 0.0409746) 99.47%,
+  #1a1a1a 100%
+),
+url(../../../public/a246af21-dcf4-470d-bf21-13710bacc942-cover.png);
+background-repeat: no-repeat;
+background-size: cover; */
+
+
+.homeScreen{
+
+  background-color: rgb(255, 255, 255);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.homeSection1{
+  min-height: 85vh;
+}
+
+.text-decNon{
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  /* .homeScreen{
+    background-image: ('./a246af21-dcf4-470d-bf21-13710bacc942-cover.png')!important;
+    background-size: fill;
+    width: 100%;
+    position: 5px 32px;
+    background-repeat: no-repeat;
+  } */
+  .homeScreen {
+    background-color: white;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    /* overflow: auto; */
+    background-position: 60% 58%; /* Center the background image horizontally and vertically */
+    background-repeat: repeat;
+}
+.homeSection1{
+  min-height: 85vh;
+}
+
+
+}
+
+
+.card-img{
+  height: 50vh!important;
+  background-size: auto;
+  width: 100%;
+}
+.main-part {
+  background-color: #01123492;
+}
+
+.slide-up {
+  animation: slideUp 4s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* 
+/* .section-1{
+  /* background-image: url('https://trupricer.com/assets/img/Path.png'); */
+  /* background-image: url('https://static.showit.co/2400/9Ga__TiiSeO7yl-fIjY0wQ/shared/star_icon_1.png');
+   */
+   /* background-image: url('https://res.cloudinary.com/bizstak/image/upload/v1684244250/backdrop2_ohofvj.png'); 
+   background-image: linear-gradient(
+    174deg,
+    #1a1a1a 7.97%,
+    #1a1a1a 9.3%,
+    rgba(26, 26, 26, 0.0409746) 87.47%,
+    #1a1a1a 100%
+  ),var(--background-image);
+  z-index: 1;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+
+   background-position: 40% 50%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+@keyframes fadeOut {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+} 
+ */
+
+ .section-1 {
+  background: linear-gradient(174deg, #1a1a1a 7.97%, #1a1a1a 9.3%, rgba(26, 26, 26, 0.0409746) 87.47%, #1a1a1a 100%), var(--background-image);
+  transition: "opacity 1s ease-in-out"!important;
+  animation: fadeOut 1s forwards!important;
+  background-position: 40% 50% !important;
+  width: 100%;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 0; }
+  10% { opacity: 0.3; }
+  20% { opacity: 0.6; }
+  30% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+
+.section-2{
+  /* background-image: url('https://trupricer.com/assets/img/Path2.png'); */
+  background-image: url('https://www.cloudtamers.com/wp-content/themes/cloudtamers/images/CT-Icon-Large.png');
+  width: 100%;
+  background-repeat: no-repeat;
+ background-size: cover;
+}
+
+
+.points-container {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animated-text {
+  /* font-family: monospace;
+    font-size: 1.2em; */
+  overflow: hidden;
+  /* white-space: nowrap; */
+  text-wrap: wrap;
+}
+
+
+
+
+.carousel-indicators button {
+  background-color: transparent; /* Set background color to transparent */
+  border: none; /* Remove borders */
+}
+
+.carousel-indicators button.active {
+  background-color: #fff; /* Set background color for active button if needed */
+}
+
+
+.join_with_us {
+  background-image: linear-gradient(
+      154deg,
+      #1a1a1a 14.97%,
+      #1a1a1a 18.3%,
+      rgba(26, 26, 26, 0.0409746) 97.47%,
+      #1a1a1a 100%
+    ),
+    url(https://2.bp.blogspot.com/-HZDG_dmy30w/WoW00dUPs5I/AAAAAAAAANA/58MVH90ILKUdirr4aDU_a1yUcoLNhQJxgCLcBGAs/s1600/handshake.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: 10% 34% 26%; */
+  height: 50vh;
+
+}
+
+.point-shadow{
+  text-shadow: 2px 2px 5px rgb(14, 30, 70);
+}
+
+
+/* @keyframes fadeIn {
+  0% { opacity: 0; }
+  10% { opacity: 0.2; }
+  20% { opacity: 0.3; }
+  30% { opacity: 0.4; }
+  100% { opacity: 1; }
+} */

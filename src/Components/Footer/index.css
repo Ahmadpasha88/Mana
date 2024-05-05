@@ -1,0 +1,40 @@
+.footer-section{
+   /* background-color: rgba(2, 24, 44, 0.963); */
+   /* background-color: whitesmoke; */
+   /* background-color: #055269e2; */
+   /* background-color: #CEDADE;  */
+  /* background-color:  rgba(197, 214, 229, 0.922); */
+  
+}
+
+.footer-text-color{
+   color: rgb(6, 6, 45);
+}
+
+.footer-text{
+   font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.footer-text-color li{
+   color: rgb(6, 6, 45);
+}
+
+.footer-section {
+   min-height: 30vh;
+   max-height: 80vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .footer-menu-font {
+   list-style-type: none;
+   font-weight: 500;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   /* color: rgba(50, 48, 48, 0.836); */
+   color: whitesmoke;
+ }

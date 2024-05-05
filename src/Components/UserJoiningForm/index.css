@@ -1,0 +1,42 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #a1c4fd;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to left, rgba(161,196,253,0.5), rgba(194,233,251,0.5));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, rgba(161,196,253,0.5), rgba(194,233,251,0.5))
+  }
+
+  /* input::placeholder {
+    color: gainsboro !important;
+    opacity: 1;
+    } */
+    input::placeholder {
+      font-size: 12px;
+    }
+ input{
+    border: 1px solid rgb(169, 165, 165);
+    
+ }
+ textarea{
+   border: 1px solid rgb(169, 165, 165);
+ }
+ label{
+   font-family: roboto;
+ }
+
+
+ .innerGra-custom {
+    
+        /* fallback for old browsers */
+        background: #fff1eb;
+      
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to left, rgba(255,241,235,0.5), rgba(172,224,249,0.5));
+      
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to left, rgba(255,241,235,0.5), rgba(172,224,249,0.5))
+    }
+  
