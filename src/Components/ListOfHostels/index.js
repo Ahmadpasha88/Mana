@@ -45,9 +45,9 @@ const ListOfHostels = () => {
             ))}
         {/* <Hostel /> */}
 
-        <div className="p-0 m-0 d-flex justify-content-center m-auto mt-5 mb-3 ">
+        {/* <div className="p-0 m-0 d-flex justify-content-center m-auto mt-5 mb-3 ">
           <PaginationContainer className='p-0 m-0' />
-        </div>
+        </div> */}
       </div>
 
       <Footer />
