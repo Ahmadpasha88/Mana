@@ -52,8 +52,9 @@ const Login = () => {
       className="text-center col-12 shadow-lg col-lg-5 m-auto d-flex flex-column justify-content-center align-items-center register-bg rounded-3 my-lg-3 border border-1"
       style={{ minHeight: "78vh" }}
     >
-      <h3 className="text-center highlight-lines mb-5 fw-semibold" style={{color: "#081735"}}>
-        Login to ManaHostel
+     <h3 className="mb-4 text-center fw-light" style={{color: "#081735"}}>
+       Login to 
+    <span className="fw-bold fs-1"> Mana</span>Hostel 
       </h3>
       <p id="loginError" className="text-center fw-bold text-danger"></p>
       <div className="col-12">

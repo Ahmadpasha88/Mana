@@ -6,6 +6,7 @@ import "./index.css";
 import { addDays, format } from "date-fns";
 import { FaLock } from "react-icons/fa6";
 
+
 const HostelBookingConfirmationModal = () => {
   const [show, setShow] = useState(false);
   const [toDate, setToDate] = useState(addDays(new Date(), 30));;

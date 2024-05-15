@@ -1,0 +1,13 @@
+.what_we_do{
+    min-height: 90vh;
+    /* background-color: rgba(232, 246, 249, 0.728); */
+    background-color: rgb(239, 240, 241);
+}
+.services_provided{
+    min-height: 100vh;
+    /* background-color: rgba(170, 215, 255, 0.24); */
+}
+.pricing_section{
+    min-height: 90vh;
+    background-color: rgb(239, 240, 241);
+}

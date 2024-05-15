@@ -4,7 +4,7 @@ import Home from './Components/Home';
 import ContactUs from './Components/ContactUs';
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import AOS from "aos";
-import { createContext, useEffect } from 'react';
+import { useEffect } from 'react';
 
 import Login from './Components/UserComponent/Login';
 import Register from './Components/UserComponent/Register';
@@ -25,12 +25,11 @@ import HostelDetailedView from './Components/HostelComponent/HostelDetailedView'
 import HostelRegister from './Components/HostelComponent/HostelRegister';
 import UserPaymentHistory from './Components/UserComponent/UserPaymentHistory';
 import HostelRegistrationContactForm from './Components/HostelComponent/HostelRegistrationContactForm';
-import Loader from './Components/Loader';
+import AllRoomsOfHostel from './Components/HostelComponent/AllRoomsOfHostel';
+
+import HostelPricingAndExplanationOfApp from './Components/HostelPricingAndExplanationOfApp'
 
 
-
-
-export const SampleContext = createContext();
 
 
 
@@ -44,9 +43,11 @@ const App = () => {
   return (
     <div className='m-0 p-0'>
       <BrowserRouter>
+
         <Header />
         <Routes>
           <Route exact path='/' element={<Home/>} />
+          <Route exact path='/hostel_pricing_information' element={<HostelPricingAndExplanationOfApp/>} />
           <Route exact path='/user_dashboard' element={<UserDashboard/>} />
           <Route exact path='/login' element={<Login/>} />
           <Route exact path='/register' element={<Register/>} />
@@ -62,7 +63,7 @@ const App = () => {
           <Route exact path='/complaints' element={<ComplaintList/>} />
           <Route exact path='/create_remark' element={<CreateRemark/>} />
           <Route exact path='/raised_remarks' element={<RaisedRemarks/>} />
-          <Route exact path='/loader' element={<Loader/>} />
+          <Route exact path="/all_rooms_of_hostel" element={<AllRoomsOfHostel/>} />
           <Route exact path='/pending_hostel' element={<PendingHostel/>} />
           <Route exact path='/profile' element={<UserProfile/>} />  
           <Route exact path='/about' element={<AboutPage/>} />

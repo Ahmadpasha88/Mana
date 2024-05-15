@@ -72,9 +72,78 @@ const Register = () => {
     } else {
       setError("");
       // Proceed with registration, call your registration function here
-      console.log("Registration data:", { firstName, lastName, mail, phone, password });
+
+      
     }
   };
+
+
+  const submitRegistration=()=>{
+
+    validateFirstAndLastName();
+    validateEmailAndPhone();
+    validatePasswordAndConfirmPassword();
+
+  
+
+    const formData = {
+      'first_name':firstName,
+      'last_name':lastName,
+      'email':mail,
+      'phone':phone,
+      'password':password
+    }
+    // fetch('http://127.0.0.1:8000/api/register', {
+    //     method: 'POST',
+      
+    //     body: JSON.stringify(formData)
+    //   })
+    //   .then(response => {
+    //     if (!response.ok) {
+    //       throw new Error('Network response was not ok');
+    //     }
+    //     return response.json(); // Parse response body as JSON
+    //   })
+    //   .then(data => {
+    //     console.log('Response from backend:', data);
+    //     // Handle success response here
+    //   })
+    //   .catch(error => {
+    //     console.error('Error sending data to backend:', error);
+    //     // Handle error response here
+    //   });
+
+
+
+      // Make a POST request to register user
+fetch('http://127.0.0.1:8000/api/register', {
+  method: 'POST',
+  headers: {
+      'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(formData),
+})
+.then(response => {
+  if (response.ok) {
+      return response.json();
+  } else if (response.status === 422) {
+      return response.json().then(data => {
+          throw new Error(JSON.stringify(data.errors));
+      });
+  } else {
+      throw new Error('Internal Server Error');
+  }
+})
+.then(data => {
+  // Handle successful response
+  console.log(data);
+})
+.catch(error => {
+  console.error('An error occurred:', error);
+  // Display error message to the user based on the error type
+});
+
+  }
   
 
   const renderSection = () => {
@@ -204,7 +273,7 @@ const Register = () => {
                 type="button"
                 className="fw-bold search-btn text-center text-nowrap text-white fs-6 px-4 col-10 col-lg-3 m-auto border border-3 border-white rounded-5"
                 style={{ backgroundColor: "#081735" }}
-                onClick={validatePasswordAndConfirmPassword}
+                onClick={submitRegistration}
               >
                 Register
               </button>
@@ -218,8 +287,9 @@ const Register = () => {
 
   return (
     <div className="text-center col-12 col-lg-5 border shadow-lg m-auto d-flex flex-column justify-content-center align-items-center register-bg rounded-3 my-lg-3" style={{ minHeight: "78vh" }}>
-      <h3 className="text-center highlight-lines mb-5 fw-semibold " style={{color: "#081735"}}>
-        Register to ManaHostel
+      <h3 className="mb-4 text-center fw-light" style={{color: "#081735"}}>
+       Register to 
+    <span className="fw-bold fs-1"> Mana</span>Hostel 
       </h3>
       <p className="text-center fw-bold text-danger">{error}</p>
       {renderSection()}

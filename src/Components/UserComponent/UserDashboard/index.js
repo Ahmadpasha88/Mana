@@ -23,6 +23,9 @@ const UserDashboard = () => {
                 <img src='https://th.bing.com/th/id/OIP.MBa2G4PCSUAo-pvdKfMetAHaIB?rs=1&pid=ImgDetMain' alt="profilePhoto" className="profilePhoto  rounded-circle " />
               </div>
               <div className="col-12 col-lg-6 m-auto my-3 d-flex flex-column flex-wrap gap-2 px-4 rounded-3 pt-2" style={{color: "#081735"}}>
+              <span className="text-nowrap fw-semibold">
+                  <span className="fw-bold fs-6">Name:</span> Dhoni
+                </span>
                 <span className="text-nowrap fw-semibold">
                   <span className="fw-bold fs-6">Joining Date:</span> 02-09-2023
                 </span>

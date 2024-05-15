@@ -33,3 +33,14 @@ ul li{
 .deatileviewBg{
     background-color: rgba(219, 226, 232, 0.541);
 }
+
+.similar-one{
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+
+}

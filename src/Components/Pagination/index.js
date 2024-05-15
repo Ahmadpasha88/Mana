@@ -216,7 +216,7 @@ function PaginationFun() {
  
   const [currentPage, setCurrentPage] = useState(1);
   useEffect(() => {
-    window.scrollTo(0, 650);
+    window.scrollTo(0, 350);
   }, [currentPage]);
 
   const { data, isLoading, isError } = useQuery(['posts', currentPage], () => fetchPosts(currentPage, 10));

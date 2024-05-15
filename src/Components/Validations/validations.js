@@ -70,8 +70,6 @@ export const validateTextArea =(address,fieldName)=> {
 
 export const FullNameValidations = (name, fieldName) => {
    
-    console.log(name)
-   
     if (!name.trim()) {
         return `Please enter your ${fieldName}.`;
     } else if (!/^[a-zA-Z\s]+$/.test(name)) {
@@ -141,20 +139,19 @@ export const onChangeImage = async (e) => {
 }
 
 
-export const validateAadharNumber = async(aadharNumber,setAadharNumber,setAadharNumberError) => {
-    setAadharNumber(()=>aadharNumber);
-    console.log(aadharNumber);
+export const validateAadharNumber = (aadharNumber) => {
+
     
     if (!aadharNumber.trim()) {
-         setAadharNumberError(()=>"Aadhar number is required.");
-         return
+        return 'Aadhar number is required.';
+         
     } else if (!/^\d{12}$/.test(aadharNumber)) {
-        setAadharNumberError(()=> "Aadhar number must be a 12-digit number.");
-        return
+        return 'Aadhar number must be a 12-digit number.';
+        
     }
-    setAadharNumberError(()=>"");
+
  
-    return null; // No errors
+    return ''; // No errors
 };
 
 export const FileValidations = (file) => {

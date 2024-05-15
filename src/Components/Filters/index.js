@@ -5,7 +5,7 @@ import { FcCalendar } from "react-icons/fc";
 
 const Filters = () => {
     return (
-        <div className='row m-auto col-12 gap-3 p-0'>
+        <div className='similar-one m-auto col-12 gap-3 p-0 pb-2 pb-lg-0'>
             <div className='m-0 p-0 col-11 col-lg-2 m-auto'>
                 <label htmlFor="sortBy" className='label fw-semibold mb-1' style={{color:'#081735'}} >
                     <FaSortAmountDown className='icon fs-5' /> Sort By:
@@ -59,7 +59,6 @@ const Filters = () => {
                 <select id="availability" className='p-2 rounded-2 col-12'>
                     <option value="all">All</option>
                     <option value="available">Available</option>
-                    <option value="booked">Booked</option>
                 </select>
             </div>
         </div>

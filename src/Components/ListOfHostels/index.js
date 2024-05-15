@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Footer from "../Footer";
-
+import { TbFilterSearch } from "react-icons/tb";
 import { TbHomeSearch } from "react-icons/tb";
 import Filters from "../Filters";
 import "./index.css";
@@ -35,6 +35,7 @@ const ListOfHostels = () => {
    
 
       <div className="row col-11 m-auto mb-5">
+        <h5 className="fw-bolder fs-4 text-dark-emphasis p-0 p-lg-3">Filters<TbFilterSearch/></h5>
         <Filters />
       </div>
       <div className="row col-11 col-lg-10 p-0 m-0 m-auto mb-5 py-3 gap-5 rounded-3 shadow-sm">

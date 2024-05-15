@@ -658,7 +658,7 @@ const Home = () => {
           </section>
 
           <section >
-            <Link to='/hostel_register_contact ' style={{ textDecoration: 'none' }}>
+            <Link to='/hostel_pricing_information' style={{ textDecoration: 'none' }}>
               <div className="join_with_us row col-12 col-lg-7 m-auto mb-5 rounded-3 shadow-lg " >
                 <h4 className="text-white text-center mt-5">Register your hostel to join with us</h4>
                 <div className="d-flex flex-column justify-content-center align-items-center">
