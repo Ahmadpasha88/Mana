@@ -23,8 +23,8 @@ const Hostel = () => {
       try {
         await navigator.share({
           title: title,
-          text: text,
-          url: textWithImage
+          text: textWithImage,
+          url: url
         });
         console.log('Product shared successfully');
       } catch (error) {
