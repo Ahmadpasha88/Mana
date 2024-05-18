@@ -10,7 +10,7 @@ import { MyContext } from '../../Context/cartContext';
 
 const Hostel = () => {
   const productTitle = 'Hostel';
-  const productDescription = 'Check out this amazing product!';
+  const productDescription = 'Check out this amazing hostel!';
   const productUrl = 'https://www.google.co.in/maps';
   const [isLiked,setIsLiked]= useState(false);
 
