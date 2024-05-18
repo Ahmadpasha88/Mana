@@ -455,7 +455,7 @@ import LazyLoad from "react-lazyload";
 
 const Hostel = lazy(() => import("../HostelComponent/Hostel"));
 
-const Home = () => {
+const Home = ({cart,setCart}) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -464,6 +464,8 @@ const Home = () => {
   const [text, setText] = useState("");
   const [currentPointIndex, setCurrentPointIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState(0);
+
+
 
 
 
@@ -597,7 +599,7 @@ const Home = () => {
             </h3>
 
             <div
-              className="col-10 col-md-5 col-lg-3 bg-white rounded-3 shadow-lg border p-2"
+              className="col-10 col-md-5 col-lg-3 bg-white rounded-3 shadow-sm border p-2"
               data-aos="zoom-in"
             >
               <Link to='/hostels_list' style={{ textDecoration: 'none' }}>
@@ -635,13 +637,12 @@ const Home = () => {
               </button>
             </div>
             <Suspense fallback={<Loader />}>
-              <Link to="/hostel_details" style={{ textDecoration: "none" }}>
+           
                 <div data-aos="zoom-in">
                   <LazyLoad height={200}>
                     <Hostel />
                   </LazyLoad>
                 </div>
-              </Link>
             </Suspense>
 
             <div className="text-center my-4">
@@ -659,7 +660,7 @@ const Home = () => {
 
           <section >
             <Link to='/hostel_pricing_information' style={{ textDecoration: 'none' }}>
-              <div className="join_with_us row col-12 col-lg-7 m-auto mb-5 rounded-3 shadow-lg " >
+              <div className="join_with_us row col-12 col-lg-7 m-auto mb-5 rounded-3 shadow-sm" >
                 <h4 className="text-white text-center mt-5">Register your hostel to join with us</h4>
                 <div className="d-flex flex-column justify-content-center align-items-center">
                   <p className="fw-semibold text-white p-0 m-0 "><span className="fw-bold fs-3">Zero</span> registration fees</p>

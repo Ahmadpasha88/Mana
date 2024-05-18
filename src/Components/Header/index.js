@@ -64,7 +64,7 @@
 //                   Register
 //                 </Link>
 //               </Nav.Item>
-              
+
 //               <Nav.Item>
 //                 <Link
 //                   to="/contact"
@@ -173,7 +173,7 @@
 //                 >
 //                   Login
 //                 </Link>
-               
+
 //               </Nav.Item>
 //               <Nav.Item>
 //                 <Link
@@ -206,19 +206,25 @@
 // export default Header;
 
 
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
+import { CiShoppingCart } from "react-icons/ci";
 import "./index.css";
 import "@fontsource/libre-baskerville"; // Defaults to weight 400
 import "@fontsource/libre-baskerville/400.css"; // Specify weight
 import "@fontsource/libre-baskerville/400-italic.css"; // Specify weight and style
+import { MyContext } from "../Context/cartContext";
+
+
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const { cart, setCart } = useContext(MyContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -249,7 +255,7 @@ const Header = () => {
                 alt="Logo"
               />
               <div className="ms-2">
-                <h3 className="mt-4 fw-bold lh-0 m-0"><span style={{fontSize:"25px"}}>Mana</span><span style={{fontSize:"17px",fontWeight:"300"}}>Hostel</span></h3>
+                <h3 className="mt-4 fw-bold lh-0 m-0"><span style={{ fontSize: "25px" }}>Mana</span><span style={{ fontSize: "17px", fontWeight: "300" }}>Hostel</span></h3>
                 <p className="slogon m-0 logoFont lh-0">
                   Stay Smart. Stay Connected
                 </p>
@@ -257,16 +263,32 @@ const Header = () => {
             </div>
           </Navbar.Brand>
 
-          <Navbar.Toggle
-            aria-controls="responsive-navbar-nav"
-            className="col-2"
-            style={{ color: "white", backgroundColor: "white" }}
-          />
+
+        
+
+          <div className="col-4 col-lg-1 row gap-3 p-0 m-0 d-lg-none">
+           
+            <button className="btn col-4 m-0">
+            <Link to='/cart' style={{textDecoration:'none'}}>
+              <span className="cart-count">{cart.length}</span>
+              <CiShoppingCart className="fs-3 p-0 m-0" />
+              </Link>
+            </button>
+        
+            
+      
+            <Navbar.Toggle
+              aria-controls="responsive-navbar-nav"
+              className="col-6"
+              style={{ color: "white", backgroundColor: "white" }}
+            />
+          </div>
 
           <Navbar.Collapse
-            className="col-2"
+            className="col-3"
             id="responsive-navbar-nav"
           >
+
             <Nav className="ms-auto logoFont options header-font-color my-3">
               <Nav.Link
                 as={Link}
@@ -288,8 +310,26 @@ const Header = () => {
               >
                 Register
               </Nav.Link>
+
+              <Nav.Link
+                as={Link}
+                to="/cart"
+                className="text-decoration-none blueText"
+                onClick={() => {
+                  document.querySelector('.navbar-toggler').click();
+                }}
+              >
+                  
+              <span className="cart-count d-none d-lg-block">{cart.length}</span>
+              <CiShoppingCart className="fs-3 p-0 m-0 d-none d-lg-block" />
+         
+              </Nav.Link>
+
+
+
             </Nav>
           </Navbar.Collapse>
+
         </Container>
       </Navbar>
     </div>

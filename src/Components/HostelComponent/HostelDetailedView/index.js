@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AvailableRooms from "../AvailableRooms";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -18,8 +18,11 @@ import { GiCctvCamera } from "react-icons/gi";
 import Hostel from "../Hostel";
 import { Link } from "react-router-dom";
 import { CiCircleChevRight } from "react-icons/ci";
+import { GoHeart, GoHeartFill } from "react-icons/go";
 
 const HostelDetailedView = () => {
+  const [isLiked, setIsLiked] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -28,6 +31,11 @@ const HostelDetailedView = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+  const handleLike = () => {
+    setIsLiked(() => !isLiked);
+  }
+
   return (
     <div className="fw-medium col-12 m-auto pt-3 shadow-lg register-bg">
       <div className="row col-lg-10 m-auto">
@@ -61,7 +69,6 @@ const HostelDetailedView = () => {
               Lakshya Hostel
             </h2>
             <p className="mb-1"><span className="fw-semibold">Address:</span> 135 alhamra colony shaikpet Hyderabad telangana 500008 </p>
-            <p className="mb-1 fw-semibold">Mobile: 9456788889 </p>
             <p className="mb-3"><span className="fw-semibold">Google Map:</span> <button className="border-0 rounded-2 fw-bold text-dark-emphasis deatileviewBg py-1 px-4 mx-3">Visit</button></p>
             <p className="mb-0 fw-semibold">Facilities:</p>
             <ul className="fw-normal d-flex flex-wrap gap-2">
@@ -77,8 +84,15 @@ const HostelDetailedView = () => {
             </ul>
             <p><span className="fw-semibold">Offered Sharings:</span> 1,2,3,4,5,6,8 Sharings</p>
 
-            <div className="col-3 border-0">
+            <div className="col-12 d-flex justify-content-between flex-wrap gap-3 border-0">
               <HostelRulesModal />
+              <button onClick={handleLike} className="btn  border border-1 border-dark">Add to favorite &nbsp;
+                {isLiked ? (
+                  <GoHeartFill  className='text-danger fs-3' style={{ cursor: 'pointer' }} />
+                ) : (
+                  <GoHeart className="fs-6" style={{ cursor: 'pointer' }} />
+                )}
+              </button>
             </div>
           </div>
         </div>

@@ -12,8 +12,8 @@ const HostelPricingAndExplanationOfApp = () => {
     <>
       <div className="row p-0 m-0">
         <section className="what_we_do d-flex flex-column justify-content-center align-items-center py-0 py-lg-5">
-          <h2 className="mx-2">
-            <span className=" fs-1 fw-bolder">Why</span> we need ?.
+          <h2 className="mx-2 mb-5">
+           <span className="underline_text"><span className=" fs-1 fw-bolder">Why</span> we need ?.</span> 
           </h2>
           <p className="text-dark-emphasis col-12 px-1 col-lg-9 fs-5">
             Running a hostel business comes with its unique challenges, from
@@ -26,8 +26,11 @@ const HostelPricingAndExplanationOfApp = () => {
         </section>
         <section className="services_provided d-flex flex-column justify-content-center align-items-center py-5">
           <h2 className="mx-2 mt-3 mb-5">
+            <span className="underline_text">
             <span className="fw-bolder fs-1">What </span>We Do to Fuel Your
             Growth?.
+            </span>
+          
           </h2>
           <p className="text-dark-emphasis text-wrap col-12 px-1 col-lg-9 fs-5">
             <span className="fw-bold text-nowrap">Efficient Management Tools:</span>{" "}

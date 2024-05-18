@@ -286,7 +286,7 @@ fetch('http://127.0.0.1:8000/api/register', {
   };
 
   return (
-    <div className="text-center col-12 col-lg-5 border shadow-lg m-auto d-flex flex-column justify-content-center align-items-center register-bg rounded-3 my-lg-3" style={{ minHeight: "78vh" }}>
+    <div className="text-center col-12 col-lg-5 m-auto d-flex flex-column justify-content-center align-items-center register-bg rounded-2 my-lg-3" style={{ minHeight: "78vh" }}>
       <h3 className="mb-4 text-center fw-light" style={{color: "#081735"}}>
        Register to 
     <span className="fw-bold fs-1"> Mana</span>Hostel 

@@ -23,7 +23,7 @@ const ListOfHostels = () => {
             style={{outline:'none'}}
           />
         </div>
-        <div className="d-flex justify-content-center mb-4 p-0 py-1">
+        {/* <div className="d-flex justify-content-center mb-4 p-0 py-1">
           <button
             type="button"
             className="fw-bold search-btn text-center text-nowrap text-white fs-6 px-3 col-5 col-lg-2 m-auto border border-3 border-white rounded-5  d-flex justify-content-center gap-2 align-items-center"
@@ -31,7 +31,7 @@ const ListOfHostels = () => {
           >
             <TbHomeSearch className="fs-3" /> Search
           </button>
-        </div>
+        </div> */}
    
 
       <div className="row col-11 m-auto mb-5">

@@ -94,7 +94,7 @@ const HostelRegistrationContactForm = () => {
         data-aos-offset="100"
         data-aos-easing="ease-in-sine">
 
-        <h2 className='text-center highlight-lines fw-bolder fs-1'>Join With Us</h2>
+        <h2 className='text-center  fw-bolder fs-1'><span className='underline_text highlight-lines'>Join With Us</span></h2>
         <div className='row p-0 m-0 col-11 col-lg-8 m-auto gap-1 rounded-3 py-4 px-2 my-3 '>
           <label htmlFor="" className="fw-semibold text-dark-emphasis p-0">
             Name

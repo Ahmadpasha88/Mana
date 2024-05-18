@@ -4,7 +4,7 @@ import Home from './Components/Home';
 import ContactUs from './Components/ContactUs';
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import AOS from "aos";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import Login from './Components/UserComponent/Login';
 import Register from './Components/UserComponent/Register';
@@ -28,8 +28,9 @@ import HostelRegistrationContactForm from './Components/HostelComponent/HostelRe
 import AllRoomsOfHostel from './Components/HostelComponent/AllRoomsOfHostel';
 
 import HostelPricingAndExplanationOfApp from './Components/HostelPricingAndExplanationOfApp'
-
-
+import { MyProvider } from './Components/Context/cartContext';
+import Cart from './Components/Cart';
+import { NetworkStatusProvider } from './Components/Context/NetWorkStatusContext';
 
 
 
@@ -39,14 +40,17 @@ const App = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 },[]);
+const [cart,setCart] =useState([])
 
   return (
     <div className='m-0 p-0'>
       <BrowserRouter>
-
+      <NetworkStatusProvider>
+     
+       <MyProvider>
         <Header />
         <Routes>
-          <Route exact path='/' element={<Home/>} />
+          <Route exact path='/' element={<Home/>}  />
           <Route exact path='/hostel_pricing_information' element={<HostelPricingAndExplanationOfApp/>} />
           <Route exact path='/user_dashboard' element={<UserDashboard/>} />
           <Route exact path='/login' element={<Login/>} />
@@ -69,8 +73,12 @@ const App = () => {
           <Route exact path='/about' element={<AboutPage/>} />
           <Route exact path='/hostels_list' element={<ListOfHostels/>} />
           <Route exact path='/payment_history' element={<UserPaymentHistory/>} />
+          <Route exact path='/cart' element={<Cart/>} />
      
         </Routes>
+        </MyProvider>
+           
+      </NetworkStatusProvider>
         
       </BrowserRouter>
     
