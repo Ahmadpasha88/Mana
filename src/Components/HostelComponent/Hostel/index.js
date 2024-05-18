@@ -18,11 +18,13 @@ const Hostel = () => {
 
   const handleShare = async ({ title=productTitle, text=productDescription, url=productUrl }) => {
     if (navigator.share) {
+      const imageUrl='https://lh3.googleusercontent.com/p/AF1QipPsuoxINZ2bIzWnY3-A36cC_gDRbJ0L9fUWLgs6=w768-h768-n-o-v1';
+      const textWithImage = `${text}\n${imageUrl}`;
       try {
         await navigator.share({
           title: title,
           text: text,
-          url: url,
+          url: textWithImage
         });
         console.log('Product shared successfully');
       } catch (error) {
