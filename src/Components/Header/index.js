@@ -218,6 +218,7 @@ import "@fontsource/libre-baskerville"; // Defaults to weight 400
 import "@fontsource/libre-baskerville/400.css"; // Specify weight
 import "@fontsource/libre-baskerville/400-italic.css"; // Specify weight and style
 import { MyContext } from "../Context/cartContext";
+import { FcHome } from "react-icons/fc";
 
 
 
@@ -309,6 +310,16 @@ const Header = () => {
                 }}
               >
                 Register
+              </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/hostel_pricing_information"
+                className="text-decoration-none blueText"
+                onClick={() => {
+                  document.querySelector('.navbar-toggler').click();
+                }}
+              >Add Your Hostel <FcHome className="fs-4 mb-2"/>
+             
               </Nav.Link>
 
               <Nav.Link

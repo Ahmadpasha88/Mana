@@ -31,6 +31,7 @@ import HostelPricingAndExplanationOfApp from './Components/HostelPricingAndExpla
 import { MyProvider } from './Components/Context/cartContext';
 import Cart from './Components/Cart';
 import { NetworkStatusProvider } from './Components/Context/NetWorkStatusContext';
+import Offline from './Components/Offline';
 
 
 
@@ -41,6 +42,8 @@ const App = () => {
     window.scrollTo(0, 0);
 },[]);
 const [cart,setCart] =useState([])
+
+
 
   return (
     <div className='m-0 p-0'>

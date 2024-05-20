@@ -15,23 +15,18 @@ const ListOfHostels = () => {
   return (
     <div className="m-0 p-0 h-100">
    
-        <div className="row m-1 col-11 col-md-8 col-lg-6 m-auto mt-5 mb-2 mb-lg-5 py-2 gap-2">
+        <div className="row m-1 col-10 col-md-8 col-lg-6 m-auto my-5 py-2 gap-2">
           <input
             type="search"
-            placeholder="Search by Hostel, Area, City, Pincode..."
-            className="col-11 col-lg-7 m-auto rounded-3 p-2 py-3 border-1"
+            placeholder="Search by Hostel, Area, City..."
+            className="col-11 col-lg-8 m-auto rounded-3 p-2 py-3 border shadow-sm"
             style={{outline:'none'}}
           />
+          <button className="col-6 col-lg-2 m-auto shadow-sm btn border d-flex justify-content-center flex-nowrap align-items-center">
+          Search &nbsp;<TbHomeSearch className="fs-4"/>
+            </button>
         </div>
-        {/* <div className="d-flex justify-content-center mb-4 p-0 py-1">
-          <button
-            type="button"
-            className="fw-bold search-btn text-center text-nowrap text-white fs-6 px-3 col-5 col-lg-2 m-auto border border-3 border-white rounded-5  d-flex justify-content-center gap-2 align-items-center"
-            style={{ backgroundColor: "#081735" }}
-          >
-            <TbHomeSearch className="fs-3" /> Search
-          </button>
-        </div> */}
+       
    
 
       <div className="row col-11 m-auto mb-5">

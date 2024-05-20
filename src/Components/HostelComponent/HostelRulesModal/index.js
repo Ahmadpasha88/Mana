@@ -15,7 +15,7 @@ function HostelRulesModal() {
     <>
     
       <Button className='text-white btn fw-semibold text-nowrap d-flex justify-content-center align-items-center gap-1 border-0' onClick={handleShow} style={{backgroundColor: "#081735"}}>
-      <FaInfoCircle />Hostel Instructions/Rules
+      <FaInfoCircle />Instructions/Rules
       </Button>
 
       <Modal show={show} onHide={handleClose} animation={false}>

@@ -57,7 +57,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="col-10 text-center col-lg-3 footer-menu-font my-3 py-2">
-         <p className="footer-text-color shadow-lg p-3 rounded-5 text-center">myhostel@info.gmail.com</p>
+         <p className="footer-text-color shadow-lg p-3 rounded-5 text-center">manahostel@info.gmail.com</p>
         </div>
       </div>
  
