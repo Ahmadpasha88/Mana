@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { MyContext } from '../Context/cartContext'
 import Hostel from '../HostelComponent/Hostel';
-import { GiShoppingCart } from "react-icons/gi";
+import {GoHeartFill } from "react-icons/go";
 import { Link } from 'react-router-dom';
 import { NetworkStatusContext } from '../Context/NetWorkStatusContext';
 import Offline from '../Offline';
@@ -28,7 +28,7 @@ const Cart = () => {
                                 :
 
                                 <div className='border border-1 text-center rounded-2 col-10 shadow-sm mt-5 col-lg-5 p-5 m-auto'>
-                                    <GiShoppingCart className='fw-bolder fs-1' />
+                                    <GoHeartFill className='fw-bolder fs-1 text-danger' />
                                     <p>You have not saved any Hostels</p>
                                     <Link to='/hostels_list'>
 

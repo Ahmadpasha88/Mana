@@ -212,6 +212,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
+import { GoHeart, GoHeartFill } from "react-icons/go";
 import { CiShoppingCart } from "react-icons/ci";
 import "./index.css";
 import "@fontsource/libre-baskerville"; // Defaults to weight 400
@@ -269,10 +270,10 @@ const Header = () => {
 
           <div className="col-4 col-lg-1 row gap-3 p-0 m-0 d-lg-none">
            
-            <button className="btn col-4 m-0">
+            <button className="btn border-0 col-4 m-0">
             <Link to='/cart' style={{textDecoration:'none'}}>
               <span className="cart-count">{cart.length}</span>
-              <CiShoppingCart className="fs-3 p-0 m-0" />
+              <GoHeart className="fs-3 p-0 m-0" />
               </Link>
             </button>
         
@@ -332,7 +333,7 @@ const Header = () => {
               >
                   
               <span className="cart-count d-none d-lg-block">{cart.length}</span>
-              <CiShoppingCart className="fs-3 p-0 m-0 d-none d-lg-block" />
+              <GoHeart className="fs-3 p-0 m-0 d-none d-lg-block" />
          
               </Nav.Link>
 
