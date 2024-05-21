@@ -72,7 +72,7 @@ const HostelRoom = () => {
       <div>
         <label className="p-0 m-0 fw-medium col-12">Room Number</label>
         <input
-          className="rounded-3 col-10 fs-6 p-2 m-0 mb-3 col-12 mb-md-2 input-styling"
+          className="rounded-3 col-10 fs-6 p-2 m-0 mb-3  mb-md-2 input-styling"
           onChange={roomNumberFun}
           type="text"
           placeholder="101"
@@ -84,7 +84,7 @@ const HostelRoom = () => {
       <div>
 
         <label htmlFor="" className="fw-medium col-12">
-          Hostel Pictures
+          Room Pictures
         </label>
         <input
           type="file"
@@ -104,7 +104,7 @@ const HostelRoom = () => {
           Selected Images
         </label>
 
-        <div className="border border-1 rounded-3 my-1 py-3 px-2 gap-1 row m-auto flex-wrap w-100 input-styling">
+        <div className="border col-10 border-1 rounded-3 my-1 py-3 px-2 gap-1 row ms-1 flex-wrap input-styling">
           {hostelRoomPics.map((pic, index) => (
             <div
               key={index}

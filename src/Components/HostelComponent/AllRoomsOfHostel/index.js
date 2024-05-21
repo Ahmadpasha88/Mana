@@ -15,7 +15,7 @@ const AllRoomsOfHostel = () => {
 
     return (
         <div className='shadow-sm card p-0 bg-dark'>
-                                <h4 className='fw-bolder text-center text-white'>Currently Added Rooms With ManaHostel</h4>
+                                <h4 className='fw-medium text-center text-white my-2'>Currently Added Rooms With ManaHostel</h4>
             <div className="slider-container rounded-2">
                 <Slider {...settings}>
                     <div className='fs-6 fw-semibold'>

@@ -212,7 +212,6 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
-import { GoHeart, GoHeartFill } from "react-icons/go";
 import { CiShoppingCart } from "react-icons/ci";
 import "./index.css";
 import "@fontsource/libre-baskerville"; // Defaults to weight 400
@@ -220,6 +219,7 @@ import "@fontsource/libre-baskerville/400.css"; // Specify weight
 import "@fontsource/libre-baskerville/400-italic.css"; // Specify weight and style
 import { MyContext } from "../Context/cartContext";
 import { FcHome } from "react-icons/fc";
+import { GoHeart } from "react-icons/go";
 
 
 
@@ -270,7 +270,7 @@ const Header = () => {
 
           <div className="col-4 col-lg-1 row gap-3 p-0 m-0 d-lg-none">
            
-            <button className="btn border-0 col-4 m-0">
+          <button className="btn border-0 col-4 m-0">
             <Link to='/cart' style={{textDecoration:'none'}}>
               <span className="cart-count">{cart.length}</span>
               <GoHeart className="fs-3 p-0 m-0" />
@@ -323,6 +323,7 @@ const Header = () => {
              
               </Nav.Link>
 
+             
               <Nav.Link
                 as={Link}
                 to="/cart"

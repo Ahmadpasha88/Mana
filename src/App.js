@@ -32,6 +32,7 @@ import { MyProvider } from './Components/Context/cartContext';
 import Cart from './Components/Cart';
 import { NetworkStatusProvider } from './Components/Context/NetWorkStatusContext';
 import Offline from './Components/Offline';
+import HostelOwnerView from './Components/HostelOwnerView';
 
 
 
@@ -42,8 +43,6 @@ const App = () => {
     window.scrollTo(0, 0);
 },[]);
 const [cart,setCart] =useState([])
-
-
 
   return (
     <div className='m-0 p-0'>
@@ -77,6 +76,7 @@ const [cart,setCart] =useState([])
           <Route exact path='/hostels_list' element={<ListOfHostels/>} />
           <Route exact path='/payment_history' element={<UserPaymentHistory/>} />
           <Route exact path='/cart' element={<Cart/>} />
+          <Route exact path='/hostel_owner_view' element={<HostelOwnerView/>} />
      
         </Routes>
         </MyProvider>

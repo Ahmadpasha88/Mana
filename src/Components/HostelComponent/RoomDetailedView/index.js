@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { FaBed } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -6,8 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "./index.css";
 import HostelBookingConfirmationModal from "../HostelBooking";
 import Footer from "../../Footer";
-import { NetworkStatusContext } from "../../Context/NetWorkStatusContext";
-import Offline from "../../Offline";
 
 const HostelRoomDetailedView = () => {
   const settings = {
@@ -19,13 +17,9 @@ const HostelRoomDetailedView = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const isOnline = useContext(NetworkStatusContext);
-
   return (
     <div className="m-0 p-0">
-      {
-        isOnline?(<div className="col-11 col-lg-10 p-0 py-lg-4 row m-0 m-auto gap-5 rounded-3 border border-1 mt-3 mb-4 register-bg room-details">
+      <div className="col-11 col-lg-10 p-0 py-lg-4 row m-0 m-auto gap-5 rounded-3 border border-1 mt-3 mb-4 register-bg room-details">
         <div className="m-auto  row col-lg-5 p-0 text-center">
           <div className="slider-container rounded-3 ">
             <Slider {...settings}>
@@ -109,9 +103,7 @@ const HostelRoomDetailedView = () => {
             </div>
           </div>
         </div>
-      </div>):(<Offline/>)
-      }
-      
+      </div>
       <Footer />
     </div>
   );
