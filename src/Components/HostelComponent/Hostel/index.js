@@ -9,15 +9,16 @@ import { useLike } from '../../CommonUtils/LikeUtil';
 
 const Hostel = (props) => {
 
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   const {data} =props;
-  const {id,name,imageUrl,price,category} = data
+  const {id,name,imageUrl,price,category,description} = data
   
-  const productTitle = 'Hostel';
-  const productDescription = 'Check out this amazing hostel!';
-  const productUrl = 'https://www.google.co.in/maps';
+  const productTitle = {name};
+  const productDescription = {description};
+  const productUrl = `/hostel_details/${id}`;
 
   const { isLiked, handleLike } = useLike();
 
