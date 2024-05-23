@@ -6,6 +6,7 @@ import Filters from "../Filters";
 import "./index.css";
 import Hostel from "../HostelComponent/Hostel";
 import PaginationContainer from "../Pagination";
+import { hostelsData } from "../CommonUtils/HostelsData";
 
 const ListOfHostels = () => {
   useEffect(() => {
@@ -35,8 +36,8 @@ const ListOfHostels = () => {
       </div>
       <div className="row col-11 col-lg-10 p-0 m-0 m-auto mb-5 py-3 gap-5 rounded-3 shadow-sm">
 
-      {hostelArray.map((index) => (
-                <Hostel key={index} />
+      {hostelsData.map((e) => (
+                <Hostel key={e.id} data={e} />
             ))}
         {/* <Hostel /> */}
 

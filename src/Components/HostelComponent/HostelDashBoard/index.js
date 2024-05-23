@@ -34,8 +34,8 @@ const HostelDashboard = () => {
   ];
 
   return (
-    <div className="p-0 row m-0 heading-lines dash-board-top-section">
-       <h2 className='text-center highlight-lines fw-semibold my-4' style={{color: "#081735"}}>Lakshya Hostel Payment Information</h2>
+    <div className="p-0 row m-0 heading-lines">
+       <h2 className='text-center fw-bolder my-4' style={{color: "#081735"}}>Lakshya Hostel Payment Information</h2>
 
       <section >
         <div className="row col-12 col-md-9 col-lg-6 m-auto">
@@ -102,10 +102,10 @@ const HostelDashboard = () => {
             onChange={handleRadioBtns}
           />
           <label
-            className="form-check-label fw-semibold highlight-lines text-dark-emphasis"
+            className="form-check-label fw-semibold text-dark-emphasis"
             htmlFor="flexRadioDefault1"
           >
-            Paid Members
+            Paid Tenents
           </label>
         </div>
         <div className="form-check">
@@ -119,16 +119,16 @@ const HostelDashboard = () => {
             onChange={handleRadioBtns}
           />
           <label
-            className="form-check-label fw-semibold highlight-lines text-dark-emphasis"
+            className="form-check-label fw-semibold text-dark-emphasis"
             htmlFor="flexRadioDefault2"
           >
-            Unpaid Members
+            Unpaid Tenent
           </label>
         </div>
       </div>
 
       <div className="col-12 row m-auto text-center mb-4 user-payment-data">
-        <h3 className="fw-bold text-dark-emphasis highlight-lines">{isPaid ? "Paid" : "Unpaid"} Members Data</h3>
+        <h3 className="fw-bold text-dark-emphasis">{isPaid ? "Paid" : "Unpaid"} Tenents Data</h3>
         {isPaid ? (
           <div>
             <HostelUserPaymentData />

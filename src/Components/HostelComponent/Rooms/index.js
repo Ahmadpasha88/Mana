@@ -11,7 +11,6 @@ const Rooms = () => {
       </div>
     
         <div className='col-11 col-lg-5 m-auto p-0 rounded-2'>
-
         <AllRoomsOfHostel/>
         </div>
       

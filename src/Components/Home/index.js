@@ -434,10 +434,11 @@ import Loader from "../Loader";
 import LazyLoad from "react-lazyload";
 import { NetworkStatusContext } from "../Context/NetWorkStatusContext";
 import Offline from "../Offline";
+import { hostelsData } from "../CommonUtils/HostelsData";
 
 const Hostel = lazy(() => import("../HostelComponent/Hostel"));
 
-const Home = ({ cart, setCart }) => {
+const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -448,6 +449,8 @@ const Home = ({ cart, setCart }) => {
   const [selectedCategory, setSelectedCategory] = useState(0);
 
   const isOnline = useContext(NetworkStatusContext);
+
+
 
   useEffect(() => {
     const handleLoad = () => {
@@ -656,11 +659,13 @@ const Home = ({ cart, setCart }) => {
                   </button>
                 </div>
                 <Suspense fallback={<Loader />}>
-                  <div data-aos="zoom-in">
-                    <LazyLoad height={200}>
-                      <Hostel />
-                    </LazyLoad>
-                  </div>
+                  <LazyLoad height={200}>
+                    <div className="row gap-2">
+                      {hostelsData.map((e) => (
+                        <Hostel key={e.id} data={e} />
+                      ))}
+                    </div>
+                  </LazyLoad>
                 </Suspense>
 
                 <div className="text-center my-4">

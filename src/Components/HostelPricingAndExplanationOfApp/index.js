@@ -78,8 +78,7 @@ const HostelPricingAndExplanationOfApp = () => {
             inefficiencies that exist within the hostel industry. By providing a
             revolutionary platform that connects hostel owners with guests,
             ManaHostel bridges the gap between supply and demand, making it
-            easier than ever to find and book quality accommodation at an
-            affordable price.
+            easier than ever to find and book.
           </p>
         </section>
 

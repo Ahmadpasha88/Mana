@@ -24,16 +24,21 @@ import Offline from "../../Offline";
 import { PiShareFat } from "react-icons/pi";
 import { handleShare } from "../../CommonUtils/ShareUtil";
 import { useLike } from "../../CommonUtils/LikeUtil";
+import { useParams } from 'react-router-dom';
+import { hostelsData } from "../../CommonUtils/HostelsData";
+
 
 
 const HostelDetailedView = () => {
-
+  const { id } = useParams();
+  
+  const data=hostelsData[id-1];
   const isOnline = useContext(NetworkStatusContext);
   const { isLiked, handleLike } = useLike();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [id]);
   const settings = {
     dots: true,
     slidesToShow: 1,
@@ -51,7 +56,7 @@ const HostelDetailedView = () => {
               <Slider {...settings}>
                 <div>
                   <img
-                    src="https://lh3.googleusercontent.com/p/AF1QipPsuoxINZ2bIzWnY3-A36cC_gDRbJ0L9fUWLgs6=w768-h768-n-o-v1"
+                    src={data.imageUrl}
                     style={{ minHeight: "40vh", maxHeight: "70vh" }}
                     className="w-100 object-fit-contain"
                     alt=""
@@ -63,9 +68,6 @@ const HostelDetailedView = () => {
                 <div>
                   <h3>3</h3>
                 </div>
-                <div>
-                  <h3>4</h3>
-                </div>
               </Slider>
             </div>
 
@@ -75,11 +77,10 @@ const HostelDetailedView = () => {
                   className="mb-3 fw-bold text-center"
                   style={{ color: "#081735" }}
                 >
-                  Lakshya Hostel
+                  {data.name}
                 </h2>
                 <p className="mb-1">
-                  <span className="fw-semibold">Address:</span> 135 alhamra
-                  colony shaikpet Hyderabad telangana 500008{" "}
+                  <span className="fw-semibold">Address:</span> {data.address}
                 </p>
                 <p className="mb-3">
                   <span className="fw-semibold">Google Map:</span>{" "}
@@ -171,9 +172,9 @@ const HostelDetailedView = () => {
             </h5>
             <hr className="mt-0 mb-4" />
             <div className="gap-3 mx-1 my-4 similar-one">
-              <Hostel />
-              <Hostel />
-              <Hostel />
+              {
+                hostelsData.map(e=><Hostel key={e.id} data={e}/>)
+              }
             </div>
 
             <div className="text-center my-3">

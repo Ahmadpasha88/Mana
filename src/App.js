@@ -33,6 +33,7 @@ import Cart from './Components/Cart';
 import { NetworkStatusProvider } from './Components/Context/NetWorkStatusContext';
 import Offline from './Components/Offline';
 import HostelOwnerView from './Components/HostelOwnerView';
+import TenantsOfHostel from './Components/HostelComponent/TenentsOfHostel';
 
 
 
@@ -59,11 +60,11 @@ const [cart,setCart] =useState([])
           <Route exact path='/register' element={<Register/>} />
           <Route exact path='/contact' element={<ContactUs/>}/>
           <Route exact path='/room_details' element={<HostelRoomDetailedView />} />
-          <Route exact path='/hostel_details' element={<HostelDetailedView/>} />
+          <Route exact path='/hostel_details/:id' element={<HostelDetailedView/>} />
           <Route exact path='/hostel_register' element={<HostelRegister/>} />
           <Route exact path='/hostel_register_contact' element={<HostelRegistrationContactForm/>} />
           <Route exact path='/rooms' element={<Rooms/>} />
-          <Route exact path='/hostel_dashboard' element={<HostelDashboard/>} />
+          <Route exact path='/hostel_payment_info' element={<HostelDashboard/>} />
           <Route exact path='/payment_info' element={<PaymentInfo/>} />
           <Route exact path='/remark' element={<Remark/>} />
           <Route exact path='/complaints' element={<ComplaintList/>} />
@@ -77,6 +78,7 @@ const [cart,setCart] =useState([])
           <Route exact path='/payment_history' element={<UserPaymentHistory/>} />
           <Route exact path='/cart' element={<Cart/>} />
           <Route exact path='/hostel_owner_view' element={<HostelOwnerView/>} />
+          <Route exact path='/tenents' element={<TenantsOfHostel/>} />
      
         </Routes>
         </MyProvider>

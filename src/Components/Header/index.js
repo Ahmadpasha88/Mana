@@ -259,7 +259,7 @@ const Header = () => {
               <div className="ms-2">
                 <h3 className="mt-4 fw-bold lh-0 m-0"><span style={{ fontSize: "25px" }}>Mana</span><span style={{ fontSize: "17px", fontWeight: "300" }}>Hostel</span></h3>
                 <p className="slogon m-0 logoFont lh-0">
-                  Stay Smart. Stay Connected
+                  Discover. Compare. Stay Smart
                 </p>
               </div>
             </div>
